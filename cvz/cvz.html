@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="vector-wlc">
+  <meta name="description" content="PvZ TAS C++ Frameworks">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PvZ TAS C++ Frameworks</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/styles/github.css">
+</head>
+
+<body>
+
+  <!--
+ * @coding: utf-8
+ * @Author: vector-wlc
+ * @Date: 2020-04-11 13:36:01
+ * @Description: PvZ TAS C++ Frameworks"
+ -->
+
+  <h1>PvZ TAS C++ Frameworks</h1>
+  <h2>@Author : <a href="https://space.bilibili.com/330307504" target="_blank">vector-wlc</a></h2>
+  <font color="red">
+    <ul>
+      <li><strong>与框架相关的所有软件安装路径、 文件解压路径和自己写的源文件的命名均不允许有中文！！！</strong></li>
+      <li><strong>框架只能在 Windows 7 以及更高版本的系统使用，且游戏版本必须为英文原版，即其它任何版本 (steam 版，年度版，任何汉化版等) 都无法使用这两套框架</strong></li>
+      <li><strong>由于作者精力有限，CppVsZombies 已停止功能更新，但若有 BUG 还会修复，因此请尽量选择使用 AsmVsZombies</strong>
+        <br></li>
+    </ul>
+  </font>
+  <h2>AsmVsZombies (高精度键控框架)</h2>
+  <p><a class="button new" href="https://www.lanzous.com/b015az7nc" target="_blank">下载 VSCode 版</a> &nbsp;&nbsp; 密码:
+    a0a3</p>
+  <p><a class="button new" href="https://www.lanzous.com/iaqbc8h" target="_blank">下载 VS2019 版</a></p>
+  <p><a class="button new" href="https://www.lanzous.com/iaqbh6f" target="_blank">下载 VS2017 版</a></p>
+  <p><a class="button new" href="https://www.lanzous.com/b015az8yj" target="_blank">更新与退回</a> &nbsp;&nbsp; 密码: 37zu</p>
+  <p><a href="https://github.com/vector-wlc/AsmVsZombies/" target="_blank">GitHub</a></p>
+  <p><a href="https://www.bilibili.com/video/BV1A7411V79A/" target="_blank">bilibili 视频教程</a></p>
+  <p><br></p>
+  <h2>CppVsZombies (传统键控框架)</h2>
+  <p><a class="button old" href="https://www.lanzous.com/b015az3yj" target="_blank">下载</a> &nbsp;&nbsp; 密码: 1jxa</p>
+  <p><a class="button old" href="https://www.lanzous.com/b015b0n6h" target="_blank">更新与退回</a> &nbsp;&nbsp; 密码: i1a2</p>
+  <p><a href="https://github.com/vector-wlc/CppVsZombies/" target="_blank">GitHub</a></p>
+  <p><a href="https://www.bilibili.com/video/BV16441197us/" target="_blank">bilibili 视频教程</a></p>
+  <p><a href="https://www.bilibili.com/video/BV12J411j7AU/" target="_blank">CvZ 更新改动</a></p>
+  <p><br></p>
+  <h2>提示</h2>
+  <p>框架使用方法请访问 GitHub 与 bilibili 视频教程</p>
+  <p>框架源代码请访问 GitHub</p>
+  <p>遇到问题请及时<a href="https://space.bilibili.com/330307504" target="_blank">联系我</a></p>
+  <h2>致谢</h2>
+  <p><a href="https://github.com/lmintlcx/pvzscripts">lmintlcx/pvzscripts</a></p>
+  <p><a href="https://github.com/yuchenxi2000/AssemblyVsZombies">yuchenxi2000/AssemblyVsZombies</a></p>
+  <h2>附录</h2>
+  <h3>卡片名称</h3>
+  <pre><code>//为卡片设定一些名字
+//用于 SelectCards 和 Card 函数
+const std::string seed_name[11][8] =
+    {
+        //豌豆射手，向日葵，樱桃炸弹，坚果，土豆地雷，寒冰射手，大嘴花，双重射手
+        {&quot;wdss&quot;, &quot;xrk&quot;, &quot;ytzd&quot;, &quot;jg&quot;, &quot;tddl&quot;, &quot;hbss&quot;, &quot;dzh&quot;, &quot;scss&quot;},
+        //小喷菇，阳光菇，大喷菇，墓碑吞噬者，魅惑菇，胆小菇，寒冰菇，毁灭菇
+        {&quot;xpg&quot;, &quot;ygg&quot;, &quot;dpg&quot;, &quot;mbtsz&quot;, &quot;mhg&quot;, &quot;dxg&quot;, &quot;hbg&quot;, &quot;hmg&quot;},
+        //荷叶，倭瓜，三发射手，缠绕海藻，火爆辣椒，地刺，火炬树桩，高坚果
+        {&quot;hy&quot;, &quot;wg&quot;, &quot;sfss&quot;, &quot;crhz&quot;, &quot;hblj&quot;, &quot;dc&quot;, &quot;hjsz&quot;, &quot;gjg&quot;},
+        //水兵菇，路灯花，仙人掌，三叶草，裂荚射手，杨桃，南瓜头，磁力菇
+        {&quot;sbg&quot;, &quot;ldh&quot;, &quot;xrz&quot;, &quot;syc&quot;, &quot;ljss&quot;, &quot;yt&quot;, &quot;ngt&quot;, &quot;clg&quot;},
+        //卷心菜投手，花盆，玉米投手，咖啡豆，大蒜，叶子保护伞，金盏花，西瓜投手
+        {&quot;jxcts&quot;, &quot;hp&quot;, &quot;ymts&quot;, &quot;kfd&quot;, &quot;ds&quot;, &quot;yzbhs&quot;, &quot;jzh&quot;, &quot;xgts&quot;},
+        //机枪射手，双子向日葵，忧郁菇，香蒲，冰西瓜投手，吸金磁，地刺王，玉米加农炮
+        {&quot;jqss&quot;, &quot;szxrk&quot;, &quot;yyg&quot;, &quot;xp&quot;, &quot;bxgts&quot;, &quot;xjc&quot;, &quot;dcw&quot;, &quot;ymjnp&quot;},
+
+        //以下为模仿者卡片名称
+        //豌豆射手，向日葵，樱桃炸弹，坚果，土豆地雷，寒冰射手，大嘴花，双重射手
+        {&quot;Mwdss&quot;, &quot;Mxrk&quot;, &quot;Mytzd&quot;, &quot;Mjg&quot;, &quot;Mtddl&quot;, &quot;vhbss&quot;, &quot;Mdzh&quot;, &quot;Mscss&quot;},
+        //小喷菇，阳光菇，大喷菇，墓碑吞噬者，魅惑菇，胆小菇，寒冰菇，毁灭菇
+        {&quot;Mxpg&quot;, &quot;Mygg&quot;, &quot;Mdpg&quot;, &quot;Mmbtsz&quot;, &quot;Mmhg&quot;, &quot;Mdxg&quot;, &quot;Mhbg&quot;, &quot;Mhmg&quot;},
+        //荷叶，倭瓜，三发射手，缠绕海藻，火爆辣椒，地刺，火炬树桩，高坚果
+        {&quot;Mhy&quot;, &quot;Mwg&quot;, &quot;Msfss&quot;, &quot;Mcrhz&quot;, &quot;Mhblj&quot;, &quot;Mdc&quot;, &quot;Mhjsz&quot;, &quot;Mgjg&quot;},
+        //水兵菇，路灯花，仙人掌，三叶草，裂荚射手，杨桃，南瓜头，磁力菇
+        {&quot;Msbg&quot;, &quot;Mldh&quot;, &quot;Mxrz&quot;, &quot;Msyc&quot;, &quot;Mljss&quot;, &quot;Myt&quot;, &quot;Mngt&quot;, &quot;Mclg&quot;},
+        //卷心菜投手，花盆，玉米投手，咖啡豆，大蒜，叶子保护伞，金盏花，西瓜投手
+        {&quot;Mjxcts&quot;, &quot;Mhp&quot;, &quot;Mymts&quot;, &quot;Mkfd&quot;, &quot;Mds&quot;, &quot;Myzbhs&quot;, &quot;Mjzh&quot;, &quot;Mxgts&quot;}
+    };
+</code></pre>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

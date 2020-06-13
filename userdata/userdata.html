@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="lmintlcx">
+  <meta name="description" content="植物大战僵尸通关存档">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Files</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/styles/github.css">
+</head>
+
+<body>
+
+<h1>存档文件位置</h1>
+<p>Windows 2000/XP (或者是设置了兼容模式): 游戏安装目录下的 <code>userdata</code> 文件夹.</p>
+<p>Windows Vista/7/8.1/10: <code>C:\ProgramData\PopCap Games\PlantsVsZombies\userdata</code> 文件夹.</p>
+<p>Steam 本地: <code>C:\ProgramData\Steam\PlantsVsZombies\userdata</code> 文件夹.</p>
+<p>Steam 云同步: <code>&lt;Steam安装目录&gt;\userdata\&lt;Steam用户ID&gt;\3590\remote</code> 文件夹.</p>
+<p>(一个典型的 Steam 安装目录是 "C:\Program Files (x86)\Steam", 用户 ID 为一串数字.)</p>
+<p>Zoo 日文版: <code>C:\ProgramData\Zoo\Plants vs Zombies\userdata</code> 文件夹.</p>
+<p>(部分文件夹带有隐藏属性, 可以打开隐藏文件夹显示再进入, 或者直接在地址栏输入路径.)</p>
+<p>(和存档文件夹并列的 "cached" 为音效缓存文件夹.)</p>
+<p><br></p>
+<h1>存档文件分类</h1>
+<h2>用户列表存档</h2>
+<p>文件名: <strong><code>users.dat</code></strong></p>
+<p>记录所有用户的名称和序号.</p>
+<h2>用户数据存档</h2>
+<p>文件名: <strong><code>user&lt;u&gt;.dat</code></strong></p>
+<p>记录序号所对应的用户的数据, 主要包括: 通过的关卡/金钱数量/购买的道具/禅境花园里的植物/解锁的成就.</p>
+<p>数字 u 为用户序号, 根据创建顺序递增. 例如新建立的第一位用户数据存档为 <code>user1.dat</code>.</p>
+<h2>关卡进度存档</h2>
+<p>文件名: <strong><code>game&lt;u&gt;_&lt;m&gt;.dat</code></strong></p>
+<p>记录序号所对应的用户在中途退出编号对应模式关卡时的进度. 内容包括战场上的 植物/僵尸/子弹/物品/... 等等各种信息.</p>
+<p>数字 u 为用户序号, 数字 m 为游戏设定的某种模式对应的编号. 例如新建立的第一位用户的无尽模式进度存档为 <code>game1_13.dat</code></p>
+<p><br></p>
+<h1>通关存档下载</h1>
+<p><a class="button new" href="https://lmintlcx.lanzous.com/b00zchkoj" target="_blank">蓝奏云下载</a> &nbsp;&nbsp; 密码: userdata</p>
+
+<p><a class="button old" href="https://pan.baidu.com/s/115qOgdfY9DG41XIBbF6giQ" target="_blank">百度云下载</a> &nbsp;&nbsp; 提取码: iri8</p>
+
+<p>包含针对 原始版/年度版/Steam年度版 的 银向/金向/完美 存档.</p>
+<p>(原版额外提供混乱得到的隐藏场地无尽模式初始存档以及常用新手阵型的后期存档.)</p>
+<p><br></p>
+<p>银向日葵存档: 刚刚完成冒险模式一周目.</p>
+<p>金向日葵存档: 完成除无尽 (VBE, IZE, EL) 之外的全部关卡.</p>
+<p>完美存档: 解锁金向, 购买了戴夫商店的绝大部分道具, 年度版完成所有成就.</p>
+<p><br></p>
+<h1>存档使用方法</h1>
+<p>将解压出来的 <code>users.dat</code> 和 <code>user1.dat</code> 复制到上述位置.</p>
+<p>没有文件夹则手动新建 (开一次游戏输完用户名就有了), 有相同文件则覆盖替换.</p>
+<p><br></p>
+<p>S/L, Save/Load, 存档/读档: 事先保存备份进度, 出问题了再读取还原回来.</p>
+<p>这本是一个单机游戏该有的功能, 不过 PvZ 并没有内置, 只能靠手动复制粘贴存档文件来实现.</p>
+<p><br></p>
+<p><strong>不同版本的游戏可能会使用同一个存档位置, 要切换版本的话建议先删除原来位置的存档文件.</strong></p>
+<p><br></p>
+<p>如果弹窗提示存档读写失败, 删除所有的存档文件(夹)再开游戏.</p>
+<p><br></p>
+<p>游戏进入关卡后会自动删除对应的关卡进度存档, 如果战斗中途遇到崩溃或者死机等意外该关卡进度会丢失.</p>
+<p>对关卡进度存档的操作之前需要先退回主界面(或者关闭游戏), 使其生成文件 <code>game*_*.dat</code>.</p>
+<p><br></p>
+<p>如果没法保存游戏进度, 可以逐个检查存档文件并把 "只读" 属性去掉.</p>
+<p>当然也可以手动修改或者用修改器设置存档只读, 来实现自动回档的效果. (Steam 版本的云存档功能自带不能删档的 bug.)</p>
+<p><br></p>
+<h1>文件数据结构</h1>
+<p>以下内容并不完整, 仅供参考.</p>
+<h2>用户列表存档</h2>
+<table>
+<thead>
+<tr>
+<th align="left">偏移</th>
+<th align="left">大小</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0x0000</td>
+<td align="left">4</td>
+<td align="left">文件头 0x0000000E</td>
+</tr>
+<tr>
+<td align="left">0x0004</td>
+<td align="left">2</td>
+<td align="left">用户数量</td>
+</tr>
+</tbody>
+</table>
+<p>后跟若干个结构: (每个代表一位用户)</p>
+<table>
+<thead>
+<tr>
+<th align="left">偏移</th>
+<th align="left">大小</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0x0000</td>
+<td align="left">2</td>
+<td align="left">用户名长度</td>
+</tr>
+<tr>
+<td align="left">0x0002</td>
+<td align="left">N</td>
+<td align="left">用户名 (ASCII)</td>
+</tr>
+<tr>
+<td align="left">0x0002+N</td>
+<td align="left">4</td>
+<td align="left">用户序号 (内部)</td>
+</tr>
+<tr>
+<td align="left">0x0006+N</td>
+<td align="left">4</td>
+<td align="left">用户序号 (体现在文件名)</td>
+</tr>
+</tbody>
+</table>
+<h2>用户数据存档</h2>
+<table>
+<thead>
+<tr>
+<th align="left">偏移</th>
+<th align="left">大小</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0x0000</td>
+<td align="left">4</td>
+<td align="left">文件头 0x0000000C</td>
+</tr>
+<tr>
+<td align="left">0x0004</td>
+<td align="left">4</td>
+<td align="left">冒险模式当前关卡 [1, 50]</td>
+</tr>
+<tr>
+<td align="left">0x0008</td>
+<td align="left">4</td>
+<td align="left">金钱数量 (显示数量要 x10)</td>
+</tr>
+<tr>
+<td align="left">0x000C</td>
+<td align="left">4</td>
+<td align="left">冒险模式已完成次数</td>
+</tr>
+<tr>
+<td align="left">0x0010</td>
+<td align="left">4x5</td>
+<td align="left">五个生存模式完成旗帜数 (最高 5)</td>
+</tr>
+<tr>
+<td align="left">0x0024</td>
+<td align="left">4x5</td>
+<td align="left">五个生存困难模式完成旗帜数 (最高 10)</td>
+</tr>
+<tr>
+<td align="left">0x0038</td>
+<td align="left">4x5</td>
+<td align="left">五个生存无尽模式完成旗帜数</td>
+</tr>
+<tr>
+<td align="left">0x004C</td>
+<td align="left">4x20</td>
+<td align="left">二十个迷你小游戏奖杯 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x009C</td>
+<td align="left">4x13</td>
+<td align="left">十三个隐藏小游戏奖杯 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x00D0</td>
+<td align="left">4</td>
+<td align="left">隐藏小游戏松鼠奖杯 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x00D4</td>
+<td align="left">4</td>
+<td align="left">智慧树高度</td>
+</tr>
+<tr>
+<td align="left">0x00D8</td>
+<td align="left">4x9</td>
+<td align="left">九个砸罐子模式奖杯 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x00FC</td>
+<td align="left">4</td>
+<td align="left">砸罐子无尽轮数</td>
+</tr>
+<tr>
+<td align="left">0x0100</td>
+<td align="left">4x9</td>
+<td align="left">九个我是僵尸模式奖杯 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0124</td>
+<td align="left">4</td>
+<td align="left">我是僵尸无尽轮数</td>
+</tr>
+<tr>
+<td align="left">0x0128</td>
+<td align="left">4</td>
+<td align="left">隐藏小游戏销售奖杯 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x012C</td>
+<td align="left">4</td>
+<td align="left">隐藏小游戏介绍奖杯 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0130</td>
+<td align="left">112</td>
+<td align="left">(未知)</td>
+</tr>
+<tr>
+<td align="left">0x01A0</td>
+<td align="left">4x8</td>
+<td align="left">已购买八张紫卡 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x01C0</td>
+<td align="left">4</td>
+<td align="left">已购买模仿者 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x01C4</td>
+<td align="left">4</td>
+<td align="left">(未知)</td>
+</tr>
+<tr>
+<td align="left">0x01C8</td>
+<td align="left">4x3</td>
+<td align="left">三盆金盏花上次购买距离 20000101 的天数 (0)</td>
+</tr>
+<tr>
+<td align="left">0x01D4</td>
+<td align="left">4</td>
+<td align="left">已购买金水壶 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x01D8</td>
+<td align="left">4</td>
+<td align="left">花肥数量 +1000 (0)</td>
+</tr>
+<tr>
+<td align="left">0x01DC</td>
+<td align="left">4</td>
+<td align="left">杀虫剂数量 +1000 (0)</td>
+</tr>
+<tr>
+<td align="left">0x01E0</td>
+<td align="left">4</td>
+<td align="left">已购买音乐盒 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x01E4</td>
+<td align="left">4</td>
+<td align="left">已购买手套 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x01E8</td>
+<td align="left">4</td>
+<td align="left">已购买蘑菇园 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x01EC</td>
+<td align="left">4</td>
+<td align="left">已购买手推车 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x01F0</td>
+<td align="left">4</td>
+<td align="left">蜗牛醒来的时间戳, 持续三分钟 (0)</td>
+</tr>
+<tr>
+<td align="left">0x01F4</td>
+<td align="left">4</td>
+<td align="left">卡槽升级次数 (0~4)</td>
+</tr>
+<tr>
+<td align="left">0x01F8</td>
+<td align="left">4</td>
+<td align="left">已购买池塘清洁车 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x01FC</td>
+<td align="left">4</td>
+<td align="left">已购买屋顶清洁车 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0200</td>
+<td align="left">4</td>
+<td align="left">剩余钉耙数量</td>
+</tr>
+<tr>
+<td align="left">0x0204</td>
+<td align="left">4</td>
+<td align="left">已购买水族馆 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0208</td>
+<td align="left">4</td>
+<td align="left">巧克力数量 +1000 (0)</td>
+</tr>
+<tr>
+<td align="left">0x020C</td>
+<td align="left">4</td>
+<td align="left">已购买智慧树 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0210</td>
+<td align="left">4</td>
+<td align="left">树肥数量 +1000 (0)</td>
+</tr>
+<tr>
+<td align="left">0x0214</td>
+<td align="left">4</td>
+<td align="left">已购买坚果包扎术 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0218</td>
+<td align="left">220</td>
+<td align="left">(未知)</td>
+</tr>
+<tr>
+<td align="left">0x02F4</td>
+<td align="left">4</td>
+<td align="left">蜗牛吃巧克力的时间戳, 持续一小时 (0)</td>
+</tr>
+<tr>
+<td align="left">0x02F8</td>
+<td align="left">4</td>
+<td align="left">蜗牛横坐标</td>
+</tr>
+<tr>
+<td align="left">0x02FC</td>
+<td align="left">4</td>
+<td align="left">蜗牛纵坐标</td>
+</tr>
+<tr>
+<td align="left">0x0300</td>
+<td align="left">4</td>
+<td align="left">解锁小游戏模式 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0304</td>
+<td align="left">4</td>
+<td align="left">解锁解谜模式 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0308</td>
+<td align="left">4</td>
+<td align="left">迷你游戏开启提示标记 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x030C</td>
+<td align="left">4</td>
+<td align="left">解谜模式砸罐子开启提示标记 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0310</td>
+<td align="left">4</td>
+<td align="left">解谜模式我是僵尸开启提示标记 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0314</td>
+<td align="left">4</td>
+<td align="left">生存模式开启提示标记 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0318</td>
+<td align="left">4</td>
+<td align="left">隐藏小游戏开启提示标记 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x031C</td>
+<td align="left">4</td>
+<td align="left">冒险模式完成提示标记 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0320</td>
+<td align="left">4</td>
+<td align="left">拥有墨西哥卷 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0324</td>
+<td align="left">4</td>
+<td align="left">蜗牛是否睡着 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x0328</td>
+<td align="left">8</td>
+<td align="left">(未知)</td>
+</tr>
+<tr>
+<td align="left">0x0330</td>
+<td align="left">4</td>
+<td align="left">禅境花园植物数量</td>
+</tr>
+</tbody>
+</table>
+<p>若花园植物数量不为零则后跟若干个结构: (0x58)</p>
+<table>
+<thead>
+<tr>
+<th align="left">偏移</th>
+<th align="left">大小</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0x00</td>
+<td align="left">4</td>
+<td align="left">植物类型</td>
+</tr>
+<tr>
+<td align="left">0x04</td>
+<td align="left">4</td>
+<td align="left">花园位置</td>
+</tr>
+<tr>
+<td align="left">0x08</td>
+<td align="left">4</td>
+<td align="left">所在列数</td>
+</tr>
+<tr>
+<td align="left">0x0C</td>
+<td align="left">4</td>
+<td align="left">所在行数</td>
+</tr>
+<tr>
+<td align="left">0x10</td>
+<td align="left">4</td>
+<td align="left">左右方向</td>
+</tr>
+<tr>
+<td align="left">0x14</td>
+<td align="left">4</td>
+<td align="left">(未知)</td>
+</tr>
+<tr>
+<td align="left">0x18</td>
+<td align="left">4</td>
+<td align="left">上次浇水的时间戳 (0)</td>
+</tr>
+<tr>
+<td align="left">0x1C</td>
+<td align="left">4</td>
+<td align="left">(未知)</td>
+</tr>
+<tr>
+<td align="left">0x20</td>
+<td align="left">4</td>
+<td align="left">颜色</td>
+</tr>
+<tr>
+<td align="left">0x24</td>
+<td align="left">4</td>
+<td align="left">施肥次数</td>
+</tr>
+<tr>
+<td align="left">0x28</td>
+<td align="left">4</td>
+<td align="left">浇水次数</td>
+</tr>
+<tr>
+<td align="left">0x2C</td>
+<td align="left">4</td>
+<td align="left">需要的浇水次数</td>
+</tr>
+<tr>
+<td align="left">0x30</td>
+<td align="left">4</td>
+<td align="left">满足方式 (3.杀虫 4.听音乐)</td>
+</tr>
+<tr>
+<td align="left">0x34</td>
+<td align="left">4</td>
+<td align="left">(未知)</td>
+</tr>
+<tr>
+<td align="left">0x38</td>
+<td align="left">4</td>
+<td align="left">上次满足的时间戳 (0)</td>
+</tr>
+<tr>
+<td align="left">0x3C</td>
+<td align="left">4</td>
+<td align="left">(未知)</td>
+</tr>
+<tr>
+<td align="left">0x40</td>
+<td align="left">4</td>
+<td align="left">上次施肥的时间戳 (0)</td>
+</tr>
+<tr>
+<td align="left">0x44</td>
+<td align="left">4</td>
+<td align="left">(未知)</td>
+</tr>
+<tr>
+<td align="left">0x48</td>
+<td align="left">4</td>
+<td align="left">上次使用巧克力的时间戳 (0)</td>
+</tr>
+<tr>
+<td align="left">0x4C</td>
+<td align="left">4</td>
+<td align="left">(未知)</td>
+</tr>
+<tr>
+<td align="left">0x50</td>
+<td align="left">4</td>
+<td align="left">(未知)</td>
+</tr>
+<tr>
+<td align="left">0x54</td>
+<td align="left">4</td>
+<td align="left">(未知)</td>
+</tr>
+</tbody>
+</table>
+<p>若为年度版则后跟: (Steam 版成就数量为 21 个)</p>
+<table>
+<thead>
+<tr>
+<th align="left">偏移</th>
+<th align="left">大小</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0x00</td>
+<td align="left">2x20</td>
+<td align="left">二十个成就完成 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x28</td>
+<td align="left">1</td>
+<td align="left">同意使用僵尸大头贴 (0/1)</td>
+</tr>
+<tr>
+<td align="left">0x29</td>
+<td align="left">4</td>
+<td align="left">大头贴数量</td>
+</tr>
+</tbody>
+</table>
+<p>若大头贴数量不为零则后跟若干个结构: (0x48)</p>
+<table>
+<thead>
+<tr>
+<th align="left">偏移</th>
+<th align="left">大小</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0x00</td>
+<td align="left">4</td>
+<td align="left">0xFFFFFFFF</td>
+</tr>
+<tr>
+<td align="left">0x04</td>
+<td align="left">4</td>
+<td align="left">皮肤颜色</td>
+</tr>
+<tr>
+<td align="left">0x08</td>
+<td align="left">4</td>
+<td align="left">衣服类型</td>
+</tr>
+<tr>
+<td align="left">0x0C</td>
+<td align="left">4</td>
+<td align="left">衣服颜色</td>
+</tr>
+<tr>
+<td align="left">0x10</td>
+<td align="left">4</td>
+<td align="left">眼部类型</td>
+</tr>
+<tr>
+<td align="left">0x14</td>
+<td align="left">4</td>
+<td align="left">眼部颜色</td>
+</tr>
+<tr>
+<td align="left">0x18</td>
+<td align="left">4</td>
+<td align="left">配件类型</td>
+</tr>
+<tr>
+<td align="left">0x1C</td>
+<td align="left">4</td>
+<td align="left">配件颜色</td>
+</tr>
+<tr>
+<td align="left">0x20</td>
+<td align="left">4</td>
+<td align="left">胡子类型</td>
+</tr>
+<tr>
+<td align="left">0x24</td>
+<td align="left">4</td>
+<td align="left">胡子颜色</td>
+</tr>
+<tr>
+<td align="left">0x28</td>
+<td align="left">4</td>
+<td align="left">头发类型</td>
+</tr>
+<tr>
+<td align="left">0x2C</td>
+<td align="left">4</td>
+<td align="left">头发颜色</td>
+</tr>
+<tr>
+<td align="left">0x30</td>
+<td align="left">4</td>
+<td align="left">眼镜类型</td>
+</tr>
+<tr>
+<td align="left">0x34</td>
+<td align="left">4</td>
+<td align="left">眼镜颜色</td>
+</tr>
+<tr>
+<td align="left">0x38</td>
+<td align="left">4</td>
+<td align="left">帽子类型</td>
+</tr>
+<tr>
+<td align="left">0x3C</td>
+<td align="left">4</td>
+<td align="left">帽子颜色</td>
+</tr>
+<tr>
+<td align="left">0x40</td>
+<td align="left">4</td>
+<td align="left">背景类型</td>
+</tr>
+<tr>
+<td align="left">0x44</td>
+<td align="left">4</td>
+<td align="left">背景颜色</td>
+</tr>
+</tbody>
+</table>
+<p>年度版继续后跟:</p>
+<table>
+<thead>
+<tr>
+<th align="left">偏移</th>
+<th align="left">大小</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0x00</td>
+<td align="left">20</td>
+<td align="left">(未知)</td>
+</tr>
+<tr>
+<td align="left">0x14</td>
+<td align="left">1</td>
+<td align="left">已经创建过大头贴 (0/1)</td>
+</tr>
+</tbody>
+</table>
+<h2>关卡进度存档</h2>
+<p>(略)</p>
+<p><br></p>
+<h1>参考资料</h1>
+<p><a href="https://tieba.baidu.com/p/1220150181">【呜咕】存档问题</a></p>
+<p><a href="https://bbs.pediy.com/thread-110690.htm">植物大战僵尸全解密---存档篇</a></p>
+<p><a href="https://plantsvszombies.fandom.com/wiki/User_file_format">User file format</a></p>
+<p><a href="https://tieba.baidu.com/p/591494866">[绝对原创]植物大战僵尸 - 全属性修改方法</a></p>
+<p><a href="https://tieba.baidu.com/p/6082053581">电脑1.0版的关卡存档文件的部分结构</a></p>
+<p><a href="https://tieba.baidu.com/p/5247021356">关于北美/free版的存档构造。</a></p>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

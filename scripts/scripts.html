@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="lmintlcx">
+  <meta name="description" content="植物大战僵尸">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>植物大战僵尸</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/styles/github.css">
+</head>
+
+<body>
+
+<h2>前排提示</h2>
+<p><br></p>
+<p>蟒蛇大战僵尸 (Python vs. Zombies) 是一个以 Python 语言写成的用于植物大战僵尸的 TAS 框架.</p>
+<p><br></p>
+<p>TAS (tool-assisted speedrun/superplay) 即 "工具辅助竞速/超玩", 指在不变动游戏本体的前提下, 利用代码工具模拟手动操作, 以较高的精度来完成游戏. 属于利用外挂来增强挑战性和趣味性的高级玩法.</p>
+<p>旧时这个游戏的 TAS 操作主要借助按键精灵来完成, 因此也被称作 <strong>"键控"</strong>. (不是 "键盘控制".)</p>
+<p>所谓框架, 即是使用底层函数封装构建的, 供使用者调用的一系列现成的基础接口. 其目的是为了减少重复劳动, 帮助用户快速方便地解决首要问题. 对这个游戏来说所提供的就是 选卡/点炮/用卡/存冰/捡钱 等操作的函数调用. </p>
+<p><br></p>
+<p>这个项目是提供给有一定的无尽和编程基础的, 以及有进阶需求 (手控玩腻了或是学习研究需要更高的操作精度) 的人方便的一套工具. 工具是给有需要的人解决问题的, 不能有把锤子就看什么都像钉子.</p>
+<p>如果你没有这个游戏的手动操作经验, 没有深入无尽模式的兴趣, 没有电脑使用和编程基础, 也没有独立学习思考解决问题的能力, 仅仅是看过视频觉得 "自动发炮" "牛x" "高大上" "装x" 就想要学的, 那么极有可能在这个过程中会遇到无数弱智问题不会解决, 或者是最后照葫画瓢打个视频就觉得没趣跑路了. 对此强烈建议不要碰这个框架, 及早退坑享乐人生.</p>
+<p><br></p>
+<p>这个项目使用调用 Win32 API 发送鼠标事件的方法来实现模拟按键点击的效果, 使用公认的运行效率较低的 Python 语言来实现各种逻辑, 再考虑到 Windows 非实时操作系统等原因, 可能会出现运行效率和精度不足的问题, 如果有更高的需求可考虑使用 C++ 语言作为接口的以及采用汇编注入实现操作的 <a href="../cvz/cvz.html">CVZ / AVZ</a> 以及使用 Excel / VBA 实现的 <a href="https://tieba.baidu.com/p/6611007895">VMvz</a> / <a href="https://tieba.baidu.com/p/6656759302">VM++</a>.</p>
+<p><br></p>
+<p><br></p>
+<p><a href="../pvz_lmintlcx_default.html"><strong>[√ 不学了快带我离开]</strong></a></p>
+<p><br></p>
+<p><a href="pvz.py/pvz.py.html">[× 好的我明白了继续]</a></p>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>
